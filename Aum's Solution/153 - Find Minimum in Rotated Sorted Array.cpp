@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//nlogn algo;
+//nlogn algo for the solution;
 
 class Solution {
 public:

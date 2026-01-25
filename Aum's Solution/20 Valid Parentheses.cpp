@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    bool isValid(string s) {
+        stack<char> st;
+         int i=0;
+         while(i<s.size()){
+            if(s[i] == '(' || s[i] == '{' ||
+            s[i]=='['){
+                st.push(s[i]);
+                i++;
+            }
+            else{
+                if(st.empty()){
+                return false;
+                }
+                char top = st.top();
+                st.pop();
+                if(s[i] == ')' && top != '('){
+                    return false;
+                }
+                if(s[i] == '}' && top != '{'){
+                    return false;
+                }
+                if(s[i] == ']' && top != '['){
+                    return false;
+                }
+            i++;
+            }
+         }
+    return st.empty();
+    }
+};

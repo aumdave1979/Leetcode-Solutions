@@ -3,7 +3,7 @@ using namespace std;
 
 
 
-//Unoptimized solution using the map ds 
+//Unoptimized/Brute force solution using the map ds 
 /*
 class Solution {
 public:

@@ -1,9 +1,32 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// Optimized Approch will try tomorrow and complete it
+// little better with TC - n^2log(n) approch
+/*
+class Solution {
+public:
+    vector<vector<int>> threeSum(vector<int>& nums) {
+        set<vector<int>> st;
+        for(int i=0;i<nums.size();i++){
+            set<int> hash;
+            for(int j=i+1;j<nums.size();j++){
+                int val = -(nums[i]+nums[j]);
+                if(hash.find(val)!=hash.end()){
+                    vector<int> temp = {nums[i],nums[j],val};
+                    sort(temp.begin(),temp.end());
+                    st.insert(temp);
+                }
+                hash.insert(nums[j]);
+            }
+        }
+    vector<vector<int>> ans(st.begin(),st.end());
+    return ans;
+    }
+};
+*/
 
-/*------------------- Brute force -----------------
+
+/* Brtue force with TC - n^3log(n) approch
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {

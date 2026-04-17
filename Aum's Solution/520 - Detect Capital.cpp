@@ -4,20 +4,21 @@ using namespace std;
 class Solution {
 public:
     bool detectCapitalUse(string word) {
-        int n = word.size();
-
         int upper = 0;
-
-        for(int i = 0; i < n; i++){
-            if(word[i] >= 'A' && word[i] <= 'Z'){
+        int n = word.size();
+        int b = word[0];
+        for(int i=0;i<word.size();i++){
+            int a = word[i];
+            if(a>=65 && a<=90){
                 upper++;
             }
         }
-
-        if(upper == n) return true;
-        if(upper == 0) return true;
-        if(upper == 1 && word[0] >= 'A' && word[0] <= 'Z') return true;
-
-        return false;
+        if(upper == n || upper == 0){
+            return true;
+        }
+        else if(upper == 1 && b>=65 && b<=90){
+            return true;
+        }
+    return false;
     }
 };

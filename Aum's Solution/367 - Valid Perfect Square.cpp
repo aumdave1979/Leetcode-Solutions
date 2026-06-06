@@ -10,8 +10,8 @@ public:
         while(low <= high){
             int mid = low + (high - low) / 2;
             long long square = 1LL * mid * mid;
-
-            if(square == num){
+            
+            if(square == num){  
                 return true;
             }
             if(square > num){

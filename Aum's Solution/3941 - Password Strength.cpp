@@ -8,7 +8,7 @@ public:
 
         int ans = 0;
 
-        for (int i = 0; i < password.size(); i++) {
+        for (int i = 0; i < password.size(); i++)  {
             char s = password[i];
 
             if (temp[s] == 1) {

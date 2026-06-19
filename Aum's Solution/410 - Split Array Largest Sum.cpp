@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+//problem almost same as the book allocation problem of striver sheet
 
 class Solution {
 public:

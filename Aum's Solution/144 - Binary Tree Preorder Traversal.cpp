@@ -1,33 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
- 
-/* Using Stack less Space complexity
- 
-class Solution {
-public:
-    vector<int> preorderTraversal(TreeNode* root) {
-        vector<int> preorder;
-        if(root == NULL) return preorder;
 
-        stack<TreeNode*> st;
-        st.push(root);
 
-        while(!st.empty()){
-            root  = st.top();
-            st.pop();
-            preorder.push_back(root->val);
-            if(root->right != NULL){
-                st.push(root->right);
-            }
-            if(root->left != NULL){
-                st.push(root->left);
-            }
-        }
-        return preorder;
-    }
-};
-*/
-
+ // Definition for a binary tree node.
   struct TreeNode {
       int val;
       TreeNode *left;
@@ -36,17 +11,45 @@ public:
       TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
       TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
   };
-class Solution {
+
+  class Solution {
 public:
-    vector<int> result;
     vector<int> preorderTraversal(TreeNode* root) {
-        preorder(root);
-        return result;
-    }
-    void preorder(TreeNode* root){
-        if(root == nullptr) return;
-        result.push_back(root->val);
-        preorder(root->left);
-        preorder(root->right);
+        vector<int> preorder;
+        stack<TreeNode*> st;
+        st.push(root);
+
+        while(!st.empty()){
+            root = st.top();
+            st.pop();
+            preorder.push_back(root->val);
+            if(root->right != nullptr){
+                st.push(root->right);
+            }
+            if(root->left != nullptr){
+                st.push(root->left);
+            }
+        }
+    return preorder;
     }
 };
+  
+/*
+class Solution {
+public:
+    vector<int> data;
+
+    void traversal(TreeNode* root){
+        if(root == nullptr){
+            return;
+        }
+        data.push_back(root->val);
+        traversal(root->left);
+        traversal(root->right);
+    }
+
+    vector<int> preorderTraversal(TreeNode* root) {
+        traversal(root);
+        return data;
+    }
+};*/

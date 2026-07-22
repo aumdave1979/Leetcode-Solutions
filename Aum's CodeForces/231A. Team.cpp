@@ -12,7 +12,7 @@ int main(){
             int temp;
             cin >> temp;
             confi.push_back(temp);
-        }
+        }   
         int count1=0;
         for(int k=0;k<confi.size();k++){
             if(confi[k]==1){

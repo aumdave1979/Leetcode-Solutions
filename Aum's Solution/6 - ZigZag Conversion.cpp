@@ -9,7 +9,7 @@ public:
         }
 
         vector<string> seq(numRows);
-        int currRow = 0;
+        int currRow = 0;    
         bool incr = true;
 
         for(int i=0;i<s.size();i++){

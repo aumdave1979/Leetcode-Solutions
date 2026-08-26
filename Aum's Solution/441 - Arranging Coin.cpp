@@ -4,6 +4,16 @@ using namespace std;
 class Solution {
 public:
     int arrangeCoins(int n) {
+        long long ans = (-1 +sqrt(1+8LL*n))/2;
+        cout << ans;
+        return ans;
+    }
+};
+
+/*
+class Solution {
+public:
+    int arrangeCoins(int n) {
         if(n==1) return 1;
         n-=1;
         int ans=1;
@@ -20,3 +30,4 @@ public:
     return ans;
     }
 };
+*/

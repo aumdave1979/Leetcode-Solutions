@@ -1,6 +1,25 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+/*
+    void sortColors(vector<int>& nums) {
+        map<int,int> mpp;
+        vector<int> ans;
+        for(int i=0;i<nums.size();i++){
+            mpp[nums[i]]++;
+        }
+        for(auto it:mpp){
+            int num = it.first;
+            int freq = it.second;
+            for(int i=0;i<freq;i++){
+                ans.push_back(num);
+            }
+        }
+        nums = ans;
+    }
+};
+*/
+
 class Solution {
 public:
     void sortColors(vector<int>& nums) {

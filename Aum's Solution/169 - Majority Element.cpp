@@ -4,20 +4,21 @@ using namespace std;
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
-        int element= 0;
-        int count = 0;
-        for(int i=0;i<nums.size();i++){
+        int count =0;
+        int ele=0;
+        int size=nums.size();
+        for(int i=0;i<size;i++){
             if(count ==0){
-                element = nums[i];
-                count++;
+                ele = nums[i];
+                count =1;
             }
-            if(nums[i]==element){
+            else if(nums[i]==ele){
                 count++;
             }
             else{
                 count--;
             }
         }
-    return element;
+    return ele;
     }
 };
